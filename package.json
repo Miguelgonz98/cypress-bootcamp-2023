@@ -1,0 +1,27 @@
+{
+  "name": "cypress-bootcamp-2023",
+  "version": "1.0.0",
+  "description": "Repository for Cypress Bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miguelgonz98/cypress-bootcamp-2023.git"
+  },
+  "keywords": [
+    "automation",
+    "javascript",
+    "cypress"
+  ],
+  "author": "Miguelgonz98",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Miguelgonz98/cypress-bootcamp-2023/issues"
+  },
+  "homepage": "https://github.com/Miguelgonz98/cypress-bootcamp-2023#readme",
+  "devDependencies": {
+    "cypress": "^12.12.0"
+  }
+}
