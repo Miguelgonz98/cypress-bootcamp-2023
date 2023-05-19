@@ -4,7 +4,8 @@
   "description": "Repository for Cypress Bootcamp",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "cy:run:chrome": "cypress run --browser chrome"
   },
   "repository": {
     "type": "git",
