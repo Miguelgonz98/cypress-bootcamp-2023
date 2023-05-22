@@ -20,7 +20,7 @@ describe('Bootcamp 2023 - Assignment 2', () => {
 
   it('Delete a Bank Account', () => {
     cy.get('span.MuiTypography-root').contains('Bank Accounts').click()
-    cy.get('li[data-test="bankaccount-list-item-O5TVd8Ytr"] button[data-test="bankaccount-delete"]').click()
+    cy.contains('ul[data-test="bankaccount-list"] li', 'Test Account').find('button').click()
     cy.get('div.MuiContainer-root.makeStyles-container-20.MuiContainer-maxWidthMd div:nth-child(1) p').contains('Test Account (Deleted)').should('exist')
   })
 
