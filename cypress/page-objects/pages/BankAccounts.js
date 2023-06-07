@@ -2,7 +2,7 @@ export class BankAccounts{
     url = "http://localhost:3000/bankaccounts";
     
     elements = {
-        getBtnCreate: () => cy.get('[data-test="bankaccount-new"'),
+        getBtnCreate: () => cy.get('[data-test="bankaccount-new"]'),
         getTxtBankName: () => cy.get('#bankaccount-bankName-input'),
         getTxtRoutingNumber: () => cy.get('#bankaccount-routingNumber-input'),
         getTxtAccountNumber: () => cy.get('#bankaccount-accountNumber-input'),

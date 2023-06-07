@@ -1,18 +1,17 @@
-import { BankAccounts, BankAccountsPage } from "../page-objects/pages/BankAccounts";
+import { BankAccountsPage } from "../page-objects/pages/bankAccounts";
+import { LoginPage } from "../page-objects/pages/login";
+import { SideBarPage } from "../page-objects/components/sideBar";
 
 describe('Real World App Bank Account Tests', () => {
-    let UUID = '1' + Math.random().toString();
-    let bankAccountName = "Test Account" + UUID;
-    let routingNumber = '987654321';
-    let accountNumber = '123456789';
+    const UUID = '1' + Math.random().toString();
+    const bankAccountName = "Test Account" + UUID;
+    const routingNumber = '987654321';
+    const accountNumber = '123456789';
   
     beforeEach(() =>{
       cy.visit('/');
-      cy.get('#username').clear().type('Katharina_Bernier');
-      cy.get('#password').clear().type('s3cret');
-      cy.get('.MuiButton-label').click();
-      cy.get('span.MuiTypography-root').contains('Bank Accounts').click();
-      cy.get('h6[data-test="sidenav-username"]').should('have.text', '@Katharina_Bernier');
+      LoginPage.login('Katharina_Bernier','s3cret');
+      SideBarPage.selectOption('Bank Accounts');
     });
   
     afterEach(() =>{
