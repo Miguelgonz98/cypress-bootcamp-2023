@@ -31,5 +31,13 @@ describe('Real World App Bank Account API Tests', () => {
       })
     });
 
+    it.only("Should delete a transaction", () => {
+      cy.request("DELETE", `${apiBankAccounts}/${bankAccountID}`, {
+        isDeleted: true
+      }).then((response) => {
+        expect(response.status).to.eq(200)
+      })
+    });
+
     
   });
